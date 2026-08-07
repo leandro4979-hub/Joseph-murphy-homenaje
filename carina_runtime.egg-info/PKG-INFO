@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: carina-runtime
+Version: 0.1.0
+Summary: A fail-closed CARINA authorization and execution vertical slice
+Requires-Python: >=3.11
