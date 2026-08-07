@@ -8,6 +8,15 @@ version = "0.1.0"
 description = "A fail-closed CARINA authorization and execution vertical slice"
 requires-python = ">=3.11"
 
+[project.optional-dependencies]
+# The policy core is deliberately stdlib-only. The HTTP transport is an
+# opt-in extra so `import carina.policy` never pulls in a web framework.
+api = [
+    "fastapi>=0.110",
+    "uvicorn>=0.27",
+    "pydantic>=2.6",
+]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 
